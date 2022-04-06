@@ -123,10 +123,21 @@
 					<th scope="col">Endereço</th>
 					<th scope="col">CPF</th>
 					<th scope="col">Senha</th>
+					<th scope="col">Ações</th>
+					
 				</tr>
 			</thead>
 			<tbody>
-				
+			<?php foreach($usuario as $usuario): ?>
+				<tr>
+					<td><?= $usuario['nome'] ?></td>
+					<td><?= $usuario['usuario'] ?></td>
+					<td><?= $usuario['email'] ?></td>
+					<td><?= $usuario['endereco'] ?></td>
+					<td><?= $usuario['cpf'] ?></td>
+					<td><?= $usuario['senha'] ?></td>
+				</tr>
+				<?php endforeach;?>
 			</tbody>
 		</table>
 	</div>
@@ -146,7 +157,7 @@
 			</thead>
 
         <tbody>
-
+			
         </tbody>
     </table>
   </div>
