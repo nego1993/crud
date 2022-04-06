@@ -25,13 +25,13 @@
         </h6>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="<?=base_url()?>colaborador">
               <span data-feather="file"></span>
               Colaboradores
             </a>
           </li>
 					<li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="<?=base_url()?>colaborador_view">
               <span data-feather="file"></span>
               Fornecedores
             </a>

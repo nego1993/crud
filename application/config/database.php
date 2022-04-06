@@ -103,7 +103,7 @@ $db2['auxiliar'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'dev_solutions',
+	'database' => 'dev_solutions/fornecedor',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -121,7 +121,7 @@ $db2['auxiliar'] = array(
 );
 
 //BANCO DE DADOS DO PRODUTO
-$db3['auxiliar'] = array(
+$db['auxiliar'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
