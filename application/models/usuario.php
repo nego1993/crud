@@ -11,4 +11,18 @@ class Usuario extends CI_Model {
     {
         $this->db->insert("colaborador", $usuario);
     }
+
+    public function mostrar($id)
+    {
+        return $this->db->get_where("colaborador", array(
+            "id" => $id
+        ))->row_array();
+    }
+
+    public function atualizar($id, $usuario)
+    {
+        $this->db->where("id", $id);
+        return $this->db->atualizar("colaborador", $usuario);
+    }
+
 }

@@ -19,7 +19,7 @@ class Colaborador extends CI_Controller {
 
 	public function adicionar()
 	{
-		$dados["title"] = 'Colaborador - Manyminds';
+		$dados["title"] = 'Adicionar colaborador - Manyminds';
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
@@ -32,9 +32,32 @@ class Colaborador extends CI_Controller {
 	public function dados_colaborador()
 	{
 		$usuario = $_POST;
+		$usuario["user_id"] = '1';
 		$this->load->model("usuario");
 		$this->usuario->dados_colaborador($usuario);
 
 		redirect("colaborador");	
+	}
+
+	public function editar($id)
+	{
+		$this->load->model("usuario");
+		$dados["usuario"] = $this->usuario->mostrar($id);
+		$dados["title"] = "Editar colaborador";
+
+		$this->load->view('templates/header', $dados);
+		$this->load->view('templates/nav-top', $dados);
+		$this->load->view('pages/form-colaborador_view', $dados);
+		$this->load->view('templates/footer', $dados);
+		$this->load->view('templates/js', $dados);
+
+	}
+
+	public function atualizar($id, $usuario)
+	{
+		$this->load->model("usuario");
+		$usuario = $_POST;
+		$this->usuario->atualizar($id, $usuario);
+		redirect("colaborador");
 	}
 }

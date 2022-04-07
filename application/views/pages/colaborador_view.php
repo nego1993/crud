@@ -3,7 +3,8 @@
 		<h1 class="h2"></h1>
 		<div class="btn-toolbar mb-2 mb-md-0">
 			<div class="btn-group mr-2">
-				<a href="<?= base_url()?>colaborador/adicionar" class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus-square"></i> Usuario</a>
+				<a href="<?= base_url()?>colaborador/adicionar" class="btn btn-sm btn-outline-secondary">
+				<i class="fas fa-plus-square"></i> Adicionar Colaborador</a>
 			</div>
 		</div>
 	</div>
