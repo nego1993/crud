@@ -4,14 +4,14 @@
         <h1 class="h2"></h1>
       </div>
 
-			<div class="col-md-12"
+			<div class="col-md-12">
 			
 						<?php if(isset($usuario)) : ?>		
-					<form action="<?=base_url() ?>colaborador/atualizar/<?= $usuario['id'] ?>" 
+					<form action="<?=base_url() ?>colaborador/update/<?= $usuario['id']?>" 
 					method="post">
 						<?php else : ?>
 					<form action="<?=base_url() ?>colaborador/dados_colaborador" method="post">
-					<?php endif; ?>
+						<?php endif; ?>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="nome">Nome</label>
@@ -54,7 +54,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" minlength="6" class="form-control" name="Senha" required>
+                            <input type="password" minlength="6" class="form-control" name="Senha">
                         </div>
                     </div>
 

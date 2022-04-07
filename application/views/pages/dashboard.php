@@ -20,9 +20,6 @@
 					<th scope="col">Email</th>
 					<th scope="col">Endereço</th>
 					<th scope="col">CPF</th>
-					
-					<th scope="col">Ações</th>
-					
 				</tr>
 			</thead>
 			<tbody>

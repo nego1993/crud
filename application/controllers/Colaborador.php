@@ -53,11 +53,19 @@ class Colaborador extends CI_Controller {
 
 	}
 
-	public function atualizar($id, $usuario)
+	public function update($id)
 	{
 		$this->load->model("usuario");
 		$usuario = $_POST;
-		$this->usuario->atualizar($id, $usuario);
+		$this->usuario->update($id, $usuario);
+
+		redirect("colaborador");
+	}
+
+	public function deletar($id)
+	{
+		$this->load->model("usuario");
+		$this->usuario->deletar($id);
 		redirect("colaborador");
 	}
 }

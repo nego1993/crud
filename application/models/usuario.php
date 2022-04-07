@@ -19,10 +19,16 @@ class Usuario extends CI_Model {
         ))->row_array();
     }
 
-    public function atualizar($id, $usuario)
+    public function update($id, $usuario)
     {
         $this->db->where("id", $id);
-        return $this->db->atualizar("colaborador", $usuario);
+
+        return $this->db->update("colaborador", $usuario);
+    }
+
+    public function deletar($id)
+    {
+        return TRUE;
     }
 
 }
