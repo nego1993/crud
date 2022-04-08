@@ -59,8 +59,16 @@
                     </div>
 
 					<div class="form-group">
+        				<label>Ativo</label>
+        					<select class="form-control" name="ativo" id="ativo" style="width: 30%">
+								<option value="1">Ativo</option>
+            					<option value="0">Inativo</option>
+        					</select>
+    				</div>
+
+					<div class="form-group">
         				<label>Tipo</label>
-        					<select class="form-control" name="TIPO" style="width: 50%">
+        					<select class="form-control" name="tipo" style="width: 50%">
 
 								<option value="colaborador">COLABORADOR</option>
             					<option value="fornecedor">FORNECEDOR</option>

@@ -45,26 +45,26 @@
 					<td><?= $usuario['cpf'] ?></td>
 					<td>
 						<?php if($usuario['tipo'] != 'ADMIN') : ?>
+						<?php if($usuario['ativo'] != '0') : ?>
 						<a href="<?= base_url()?>colaborador/editar/<?= $usuario["id"] ?>" 
 						class="btn btn-outline-primary" >
 						<i class="fas fa-pencil-alt"></i>
 						</a>
-					
-						<div class="btn-group btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-outline-success active">
-								<input type="radio" name="ativo" id="option1" autocomplete="off"> A
-							</label>
-							<label class="btn btn-outline-danger active">
-								<input type="radio" name="inativo" id="option2" autocomplete="off"> I
-							</label>
-						</div>	
+						<?php endif	; ?>
+							
+						<?php if($usuario['ativo'] == '1') : ?>	
+						<a href="#" class="btn btn-success btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">A</a>
+						<?php endif ; ?>
 
-						<?php else : ?>												
+						<?php if($usuario['ativo'] == '0') : ?>
+						<a href="#" class="btn btn-danger btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">I</a>
+						<?php endif ; ?>
+								
+																	
 										</td>
 									</tr>
 						<?php endif	; ?>
-					<?php endforeach;?>
-						
+						<?php endforeach;?>
 							</tbody>
 						</table>
 					</div>
