@@ -27,13 +27,7 @@
           <li class="nav-item">
             <a class="nav-link" href="<?=base_url()?>colaborador">
               <span data-feather="file"></span>
-              Colaboradores
-            </a>
-          </li>
-					<li class="nav-item">
-            <a class="nav-link" href="<?=base_url()?>colaborador_view">
-              <span data-feather="file"></span>
-              Fornecedores
+              Colaborador / Fornecedor
             </a>
           </li>
 					<li class="nav-item">

@@ -7,7 +7,7 @@ class Colaborador extends CI_Controller {
 	{
 		$this->load->model("usuario");
 		$dados["usuario"] = $this->usuario->index();
-		$dados["title"] = 'Colaborador - Manyminds';
+		$dados["title"] = 'Colaborador/Fornecedor - Manyminds';
 
 		$this->load->view('templates/header', $dados);
 		$this->load->view('templates/nav-top', $dados);
@@ -32,7 +32,6 @@ class Colaborador extends CI_Controller {
 	public function dados_colaborador()
 	{
 		$usuario = $_POST;
-		$usuario["user_id"] = '1';
 		$this->load->model("usuario");
 		$this->usuario->dados_colaborador($usuario);
 
@@ -62,10 +61,10 @@ class Colaborador extends CI_Controller {
 		redirect("colaborador");
 	}
 
-	public function deletar($id)
+	public function status($usuario)
 	{
 		$this->load->model("usuario");
-		$this->usuario->deletar($id);
-		redirect("colaborador");
+		$this->usuario->status($usuario);
+		
 	}
 }

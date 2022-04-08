@@ -47,7 +47,7 @@
 						<div class="form-group">
 							<label for="cpf">CPF</label>
 							<input type="number" class="form-control" name="cpf" id="cpf" 
-                            placeholder="cpf" pattern="d{3}.\d{3}.\d{3}-d{2}" required value="<?= isset($usuario) ? $usuario["cpf"] :"" ?>">
+                            placeholder="cpf" pattern="d{3}.\d{3}.\d{3}-d{2}" required value="<?= isset($usuario) ? $usuario["cpf"] :"" ?>" maxlength="11">
 						</div>
 					</div>
                     
@@ -57,6 +57,15 @@
                             <input type="password" minlength="6" class="form-control" name="Senha">
                         </div>
                     </div>
+
+					<div class="form-group">
+        				<label>Tipo</label>
+        					<select class="form-control" name="TIPO" style="width: 50%">
+
+								<option value="colaborador">COLABORADOR</option>
+            					<option value="fornecedor">FORNECEDOR</option>
+        					</select>
+    				</div>
 
 					<div class="col-md-6">
 							<button type="submit" class="btn btn-success btn-xs">

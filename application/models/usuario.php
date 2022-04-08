@@ -1,20 +1,27 @@
 <?php
 
-class Usuario extends CI_Model {
+ class Usuario extends CI_Model {
 
+    //Só pra lembrar, tu ta usando ORM, e não a query
     public function index()
     {
-        return $this->db->get("colaborador")->result_array();
+
+        /*
+          A QUERY COMPLETA PARA REALIZAR ESTA OPERAÇÃO
+          INSERT INTO `usuario`('nome', 'usuario', 'email', 'endereco', 'cpf', 'tipo', 'senha')
+          VALUES (?, ?, ?, ?, ?, ?, ?)
+         */
+        return $this->db->get("usuario")->result_array();
     }
 
     public function dados_colaborador($usuario)
     {
-        $this->db->insert("colaborador", $usuario);
+        $this->db->insert("usuario", $usuario);
     }
 
     public function mostrar($id)
     {
-        return $this->db->get_where("colaborador", array(
+        return $this->db->get_where("usuario", array(
             "id" => $id
         ))->row_array();
     }
@@ -23,12 +30,23 @@ class Usuario extends CI_Model {
     {
         $this->db->where("id", $id);
 
-        return $this->db->update("colaborador", $usuario);
+        return $this->db->update("usuario", $usuario);
+        
     }
 
-    public function deletar($id)
+    public function status($usuario, $status)
     {
-        return TRUE;
+        // 1 ativo
+        // 0 Inativo
+        if (isset($usuario['status']) == 1)
+        {
+            $this->db->where("status", $status);
+            return $this->db->status = TRUE;
+
+        }else{
+
+        }
+
     }
 
 }
