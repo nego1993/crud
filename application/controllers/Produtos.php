@@ -40,6 +40,7 @@ class Produtos extends CI_Controller {
 	
 		public function editar($id)
 		{
+			permissao();
 			$this->load->model("produto");
 			$dados["produtos"] = $this->produto->mostrar($id);
 			$dados["title"] = "Editar produtos";

@@ -40,6 +40,7 @@ class Colaborador extends CI_Controller {
 
 	public function editar($id)
 	{
+		permissao();
 		$this->load->model("usuario");
 		$dados["usuario"] = $this->usuario->mostrar($id);
 		$dados["title"] = "Editar colaborador";
