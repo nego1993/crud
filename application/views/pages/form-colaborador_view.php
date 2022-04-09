@@ -54,7 +54,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Senha</label>
-                            <input type="password" minlength="6" class="form-control" name="Senha">
+                            <input type="password md5" minlength="6" class="form-control" name="senha">
                         </div>
                     </div>
 

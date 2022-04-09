@@ -2,7 +2,6 @@
 
  class Usuario extends CI_Model {
 
-    //Só pra lembrar, tu ta usando ORM, e não a query
     public function index()
     {
 
@@ -33,5 +32,14 @@
         return $this->db->update("usuario", $usuario);
         
     }
+
+ /* public function store()
+    {
+        $this->load->model("login_model");
+        $usuario    = $_POST ["usuario"];
+        $password   = $_POST ["password"];
+        $user       = $this->login_model->store($usuario, $password);
+        return $user;
+    }*/
 
 }

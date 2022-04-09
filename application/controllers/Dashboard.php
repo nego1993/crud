@@ -7,6 +7,7 @@ class Dashboard extends CI_Controller {
 
 		public function index()
 		{
+			
 			$this->load->model("usuario");
 			$dados["usuario"] = $this->usuario->index();
 			$dados["title"] = 'Dashboard - Manyminds';
@@ -19,6 +20,14 @@ class Dashboard extends CI_Controller {
 
 		}
 		
+		public function store()
+			{
+				$this->load->model("usuario");
+				$user["usuario"] = $this->usuario->index();
+				
+				$this->usuario->store($user);
+				redirect("dashboard");
+			}
 		
 	}
 	
