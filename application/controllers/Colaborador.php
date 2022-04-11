@@ -18,6 +18,7 @@ class Colaborador extends CI_Controller {
 
 	}
 
+	//MÉTODO RESPONSÁVEL POR ADICIONAR COLABORADOR
 	public function adicionar()
 	{
 		$dados["title"] = 'Adicionar colaborador - Manyminds';
@@ -41,6 +42,7 @@ class Colaborador extends CI_Controller {
 
 	public function editar($id)
 	{
+		//METODO RESPONSÁVEL PÓR EDITAR UM COLOABORADOR
 		permissao();
 		$this->load->model("usuario");
 		$dados["usuario"] = $this->usuario->mostrar($id);
@@ -56,6 +58,7 @@ class Colaborador extends CI_Controller {
 
 	public function update($id) 
 	{
+		//MÉTODO RESPONSÁVEL POR ATUALIZAR UM COLABORADOR
 		$this->load->model("usuario");
 		$usuario = $_POST;
 		$this->usuario->update($id, $usuario);
