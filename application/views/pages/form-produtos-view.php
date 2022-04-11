@@ -10,7 +10,7 @@
 					<form action="<?=base_url() ?>produtos/update/<?= $produtos['id']?>" 
 					method="post">
 						<?php else : ?>
-					<form action="<?=base_url() ?>produtos/dados_produto" method="post">
+					<form action="<?=base_url() ?>produtos/dados_produto/" method="post">
 						<?php endif; ?>
 				
 					<div class="col-md-6">
@@ -32,7 +32,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="preco">Preço</label>
-							<input type="text" class="form-control" name="preco" id="preco"
+							<input type="price" class="form-control" name="preco" id="preco"
                              placeholder="Preço" required value="<?= isset($produtos) ? $produtos["preco"] :"" ?>">
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 					<div class="col-md-6">
 							<button type="submit" class="btn btn-success btn-xs">
 								<i class="fas fa-check"></i> Salvar</button>
-							<a href="" class="btn btn-danger btn-xs">
+							<a href="<?= base_url() ?>produtos" class="btn btn-danger btn-xs">
 							<i class="fas fa-times"></i> Cancelar</a>
 						</div>
 					</div>

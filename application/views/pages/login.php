@@ -41,7 +41,7 @@
       </svg>
       <div class="form">
         
-      <form action="<?php base_url() ?>login/store" method="post">
+      <form action="<?php base_url() ?>dashboard" method="post">
         
         <label for="usuario">Usuário</label>
         <input type="usuario " id="usuario" class="form-control" required>

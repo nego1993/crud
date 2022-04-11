@@ -18,6 +18,7 @@ class Produtos extends CI_Controller {
 
 		}
 
+		//MÉTODO RESPONSAVEL POR ADICIONAR UM PRODUTO
 		public function adicionar()
 		{
 			$dados["title"] = 'Adicionar produtos - Manyminds';
@@ -29,6 +30,8 @@ class Produtos extends CI_Controller {
 			$this->load->view('templates/js', $dados);
 	
 		}
+
+		
 		public function dados_produto()
 		{
 			$produtos = $_POST;
@@ -37,7 +40,8 @@ class Produtos extends CI_Controller {
 	
 			redirect("produtos");	
 		}
-	
+		
+		// MÉTODO RESPONSÁVEL POR EDITAR UM PRODUTO
 		public function editar($id)
 		{
 			permissao();
@@ -52,7 +56,8 @@ class Produtos extends CI_Controller {
 			$this->load->view('templates/js', $dados);
 	
 		}
-	
+
+		//MÉTODO REPONSÁVEL POR ATUAIZAR UM USUÁRIO
 		public function update($id) 
 		{
 			$this->load->model("produto");

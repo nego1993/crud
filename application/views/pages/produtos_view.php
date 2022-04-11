@@ -47,11 +47,13 @@
 						<?php endif	; ?>
 							
 						<?php if($produto['ativo'] == '1') : ?>	
-						<a href="#" class="btn btn-success btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">A</a>
+						<a href="#" class="btn btn-success btn-lg disabled" tabindex="-1" 
+						="button" aria-disabled="true">A</a>
 						<?php endif ; ?>
 
 						<?php if($produto['ativo'] == '0') : ?>
-						<a href="#" class="btn btn-danger btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">I</a>
+						<a href="#" class="btn btn-danger btn-lg disabled" tabindex="-1" 
+						role="button" aria-disabled="true">I</a>
 						<?php endif ; ?>
 								
 																	

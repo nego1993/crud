@@ -5,6 +5,7 @@ class Colaborador extends CI_Controller {
 
 	public function index()
 	{
+		
 		$this->load->model("usuario");
 		$dados["usuario"] = $this->usuario->index();
 		$dados["title"] = 'Colaborador/Fornecedor - Manyminds';
