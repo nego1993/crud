@@ -4,7 +4,7 @@ Class Login_model extends CI_Model
 {
     function recuperarlogin($usuario, $senha)
     {
-        $sql = "SELECT * FROM usuario_master WHERE $senha AND $usuario ";
+        $sql = "SELECT usuario, senha FROM usuario WHERE 1";
         $data = array($senha, $usuario);
         $this->db->query($sql, $data)->result();
 

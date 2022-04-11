@@ -21,7 +21,15 @@ class Login extends CI_Controller {
 
 			$this->load->model("login_model");
 			$user = $this->login_model->recuperarlogin($senha, $usuario);
-			return ('dashboard');
+		
+			
+
+			if ($user) {
+			return $this->session->set_userdata("user", $user);
+				redirect("dashboard");
+			}else{
+				redirect("login");
+			}
 			
 		}
  
