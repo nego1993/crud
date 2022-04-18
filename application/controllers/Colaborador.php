@@ -43,7 +43,7 @@ class Colaborador extends CI_Controller {
 	public function editar($id)
 	{
 		//METODO RESPONSÁVEL PÓR EDITAR UM COLOABORADOR
-		permissao();
+		
 		$this->load->model("usuario");
 		$dados["usuario"] = $this->usuario->mostrar($id);
 		$dados["title"] = "Editar colaborador";
@@ -53,6 +53,7 @@ class Colaborador extends CI_Controller {
 		$this->load->view('pages/form-colaborador_view', $dados);
 		$this->load->view('templates/footer', $dados);
 		$this->load->view('templates/js', $dados);
+	
 
 	}
 

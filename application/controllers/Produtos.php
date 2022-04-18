@@ -44,7 +44,7 @@ class Produtos extends CI_Controller {
 		// MÉTODO RESPONSÁVEL POR EDITAR UM PRODUTO
 		public function editar($id)
 		{
-			permissao();
+			
 			$this->load->model("produto");
 			$dados["produtos"] = $this->produto->mostrar($id);
 			$dados["title"] = "Editar produtos";
