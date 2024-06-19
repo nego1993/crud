@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 			
 
 			if ($user) {
-			return $this->session->set_userdata("user", $user);
+			return $this->session->set_userdata("usuario", $user);
 				redirect("dashboard");
 			}else{
 				redirect("login");
